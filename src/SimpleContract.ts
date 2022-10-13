@@ -1,4 +1,4 @@
-import {Contract, ContractState, Ctx, Action} from "@wavesenterprise/contract-core";
+import {Contract, Ctx, ContractState, Action} from "@wavesenterprise/contract-core";
 
 @Contract()
 class SimpleContract {
@@ -8,8 +8,9 @@ class SimpleContract {
 
     }
 
-    @Action
-    simple() {
-        return "dimple";
+    @Action()
+    getNumber() {
+        return 10;
     }
+
 }
