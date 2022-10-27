@@ -1,15 +1,17 @@
-import {Contract, Ctx, ContractState, Action} from "@wavesenterprise/contract-core";
+import {Contract, Ctx, ContractState, Action, Context, State} from "@wavesenterprise/contract-core";
 
-@Contract()
-class SimpleContract {
+export default class SimpleContract {
 
-    @Action({onInit: true})
-    initialize() {
+    @State() state: ContractState;
+    @Ctx context: Context
+
+     @Action({onInit: true})
+    async _contructor() {
 
     }
 
     @Action()
-    getNumber() {
+    async getNumber() {
         return 10;
     }
 

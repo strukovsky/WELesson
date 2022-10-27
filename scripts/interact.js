@@ -5,7 +5,7 @@ const {Keypair} = require("@wavesenterprise/signer")
 
 const SEED = 'thing action ugly exclude usage day victory file panel jeans oxygen melody upset employ tool'
 const NODE_URL = 'https://hackathon.welocal.dev/node-0/';
-const CONTRACT_ID = "GtkLxLpEXb7JRjP3q5nYv1XGDNDPvf8o7hqSvq621mFD";
+const CONTRACT_ID = "CVtHxvqtKpMUDBs78UK3MDp4vGyRX4UyUEtPTSVqKb1s";
 const sdk = new We(NODE_URL)
 /*
 Contract at 7x1VsK64f8dv5yscLMscEs8fEGLDkT2R2Xw3hFj4dGNc
@@ -19,7 +19,7 @@ async function interact() {
         params: [
             {
                 key: 'action',
-                value: 'simple',
+                value: 'getNumber',
                 type: 'string'
             },
         ],
