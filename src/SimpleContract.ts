@@ -7,12 +7,6 @@ export default class SimpleContract {
 
      @Action({onInit: true})
     async _contructor() {
-
+        this.state.setInt("number", 10);
     }
-
-    @Action()
-    async getNumber() {
-        return 10;
-    }
-
 }

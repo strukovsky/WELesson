@@ -14,8 +14,8 @@ async function deploy() {
 
     const tx = TRANSACTIONS.CreateContract.V5({
         fee,
-        imageHash: "b0ec0eb02c58b09482d7d311b7577652f5d5173947c08ef82ca4fa5a3a899c6c",
-        image: "strukovsky/simple-contract:1.1.4",
+        imageHash: "9edecfc0b33210847d6799a1ca7bed4f48cf59b9f95f2a7eebe61110bd66047a",
+        image: "strukovsky/simple-contract:1.1.6",
         validationPolicy: {type: "any"},
         senderPublicKey: await keyPair.publicKey(),
         params: [],
