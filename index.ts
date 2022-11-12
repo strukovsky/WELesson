@@ -1,3 +1,8 @@
-import {start} from "@wavesenterprise/contract-core";
+import {initContract} from "@wavesenterprise/contract-core";
 
-start('./src/SimpleContract');
+initContract({
+    contractPath: './src/SimpleContract'
+})
+.then(() => {
+    console.log('contract started');
+});

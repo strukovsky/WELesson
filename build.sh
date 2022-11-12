@@ -4,8 +4,8 @@
 echo $1
 #$1 -- image
 set -e
-docker build . -t $1
-docker push $1
+docker buildx create --use
+docker buildx build --platform linux/amd64 --push -t $1 .
 
 inspectResult=$(docker inspect $1 | grep '"Id": "sha256')
 imageHash=$(awk -F'"Id": "sha256:|",' '{print $2}' <<< "$inspectResult")

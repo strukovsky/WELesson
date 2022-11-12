@@ -1,12 +1,21 @@
-import {Contract, Ctx, ContractState, Action, Context, State} from "@wavesenterprise/contract-core";
+import {
+    Action,
+    Contract,
+    TVar,
+    Var,
+    Ctx,
+    Param
 
+} from "@wavesenterprise/contract-core";
+
+@Contract()
 export default class SimpleContract {
 
-    @State() state: ContractState;
-    @Ctx context: Context
+    @Var() myNumber: TVar<number>;
 
-     @Action({onInit: true})
-    async _contructor() {
-        this.state.setInt("number", 10);
+    @Action({onInit: true})
+    async _constructor() {
+        this.myNumber.set(10);
     }
+
 }

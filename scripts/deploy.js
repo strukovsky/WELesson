@@ -6,7 +6,7 @@ const SEED = 'thing action ugly exclude usage day victory file panel jeans oxyge
 const NODE_URL = 'https://hackathon.welocal.dev/node-0/';
 
 const sdk = new We(NODE_URL);
-// 2V7NjBXXD16m1vnko4SK3E2JQeUqS8MyczAQZYyUds1x
+
 async function deploy() {
     const config = await sdk.node.config();
     const fee = 100000000;
@@ -14,13 +14,13 @@ async function deploy() {
 
     const tx = TRANSACTIONS.CreateContract.V5({
         fee,
-        imageHash: "9edecfc0b33210847d6799a1ca7bed4f48cf59b9f95f2a7eebe61110bd66047a",
-        image: "strukovsky/simple-contract:1.1.6",
+        imageHash: "fa58f60431c98c780ecb6bb2d336c5cff494b18dc3d4f8a321e5f5a3f8e5672c",
+        image: "strukovsky/demo_simple_contract:1.0.1",
         validationPolicy: {type: "any"},
         senderPublicKey: await keyPair.publicKey(),
         params: [],
         payments: [],
-        contractName: "SimpleContract",
+        contractName: "DemoContract",
         apiVersion: "1.0"
     });
 
